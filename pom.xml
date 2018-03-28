@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.sivalabs</groupId>
-    <artifactId>spring-security-oauth2-demo</artifactId>
+    <artifactId>oauth2-samples</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
