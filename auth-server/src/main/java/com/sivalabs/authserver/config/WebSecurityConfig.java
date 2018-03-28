@@ -1,4 +1,4 @@
-package com.sivalabs.authserver;
+package com.sivalabs.authserver.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.annotation.Order;

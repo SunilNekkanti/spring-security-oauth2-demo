@@ -1,6 +1,7 @@
 package com.sivalabs.catalogservice;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -27,6 +28,12 @@ public class CatalogController {
             productDTOs.add(new ProductDTO(product.getId(),product.getName(), product.getPrice(), promotion));
         }
         return productDTOs;
+    }
+
+    @PreAuthorize("hasAuthority('ROLE_ADMIN')")
+    @GetMapping("/admin/products")
+    public List<ProductDTO> adminProducts() {
+        return products();
     }
 
     private List<Product> getProducts() {
